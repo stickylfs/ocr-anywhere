@@ -1,0 +1,30 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/ocr-anywhere-common",
+    "crates/ocr-anywhere",
+    "crates/ocr-anywhere-installer",
+]
+
+[workspace.package]
+version = "1.0.0"
+edition = "2021"
+rust-version = "1.82"
+authors = ["stickylfs"]
+license = "MIT"
+repository = "https://github.com/stickylfs/ocr-anywhere"
+
+[workspace.dependencies]
+ocr-anywhere-common = { path = "crates/ocr-anywhere-common" }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+windows = "0.58"
+windows-core = "0.58"
+winres = "0.1"
+
+[profile.release]
+opt-level = 3
+lto = "fat"
+codegen-units = 1
+panic = "abort"
+strip = true

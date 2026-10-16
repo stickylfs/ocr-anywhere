@@ -1,0 +1,18 @@
+# Third-Party Notices
+
+OCR Anywhere includes the following open-source components. Their full license
+texts are available in the linked repositories.
+
+## Linked into the executables
+
+| Component | License | Source |
+| :--- | :--- | :--- |
+| windows, windows-core, windows-targets | MIT OR Apache-2.0 | https://github.com/microsoft/windows-rs |
+| serde, serde_json | MIT OR Apache-2.0 | https://github.com/serde-rs |
+| itoa, memchr, zmij, unicode-ident | MIT / Apache-2.0 / Unlicense / Unicode-3.0 | https://crates.io |
+
+## Build-time only (not distributed)
+
+| Component | License | Source |
+| :--- | :--- | :--- |
+| winres | MIT | https://github.com/mxre/winres |

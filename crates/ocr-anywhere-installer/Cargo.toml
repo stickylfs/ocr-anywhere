@@ -1,0 +1,37 @@
+[package]
+name = "ocr-anywhere-installer"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+publish = false
+description = "Per-user installer and uninstaller for OCR Anywhere"
+
+[[bin]]
+name = "ocr-anywhere-setup"
+path = "src/main.rs"
+
+[dependencies]
+ocr-anywhere-common = { workspace = true }
+windows = { version = "0.58", features = [
+    "Win32_Foundation",
+    "Win32_System_Com",
+    "Win32_System_Ole",
+    "Win32_System_Registry",
+    "Win32_System_Threading",
+    "Win32_System_LibraryLoader",
+    "Win32_System_Diagnostics_ToolHelp",
+    "Win32_UI_Shell",
+    "Win32_UI_WindowsAndMessaging",
+    "Win32_UI_Controls",
+    "Win32_Storage_FileSystem",
+    "Win32_Security",
+    "Win32_System_SystemInformation",
+    "Win32_Globalization",
+] }
+windows-core = "0.58"
+
+[build-dependencies]
+winres = { workspace = true }

@@ -1,0 +1,19 @@
+[package]
+name = "ocr-anywhere-common"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+publish = false
+description = "Configuration model, config.ini parser and i18n for OCR Anywhere"
+
+[dependencies]
+serde = { workspace = true }
+windows = { version = "0.58", features = [
+    "Win32_Foundation",
+    "Win32_Security",
+    "Win32_System_Registry",
+    "Win32_UI_Input_KeyboardAndMouse",
+] }
